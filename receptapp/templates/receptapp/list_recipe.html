@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %} Изменение рецепта {% endblock %}
+
+{% block content %}
+<script>
+    var element = document.querySelector('.main');
+    element.classList.add('main-board');
+
+</script>
+
+    {% for recipe in recipe_author %}
+        <p> {{recipe}} <a href="#">Изменить</a></p>
+    {% endfor %}
+
+{% block content %}

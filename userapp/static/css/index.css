@@ -1,0 +1,541 @@
+* {
+    margin:unset;
+    padding:unset;
+}
+
+a{
+    text-decoration:unset;
+}
+
+p,h1,h2,{
+    font-family: Inter;
+}
+
+#particles-js{
+  position: fixed;
+  z-index: 1;
+  left:0;
+  top:0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(110deg,#6D8B48 ,rgba(68, 40, 36, 0.88) );
+}
+
+
+
+p{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    margin-top:22px;
+}
+
+body{
+    background-color:#6D8B48;
+}
+
+.logo{
+    margin:10px;
+    z-index:2;
+    border-radius: 200px;
+    width: 98px;
+
+}
+
+.header-start-page{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45px;
+}
+
+
+.header {
+    margin-top:unset;
+    height:150px;
+    flex-direction: row;
+    justify-content: space-around;
+    box-shadow: 0px 4px 33px 1px rgba(68, 40, 36, 0.88);
+    background: linear-gradient(180.00deg,
+                rgb(237, 172, 81) 86.26%,
+                rgba(68, 40, 36, 0.88) 100%);
+}
+
+.navi-menu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 75px;
+}
+
+.title-page{
+    color: rgba(68, 40, 36, 0.88);
+    font-size: 34px;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: -1px 1px #FFEDCFCB;
+
+}
+
+.link-navi{
+    color: rgb(208, 79, 63);
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.header-auth{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.user{
+    color: rgb(122, 153, 86);
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.button-exit{
+    border: unset;
+    outline: unset;
+    background: unset;
+    color: rgba(68, 40, 36, 0.88);
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.forms-registration{
+    z-index:2;
+    opacity:0.86;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color:#442824E0;
+    box-shadow: 0px 0px 20px 1px #F5D7A5;
+    width:500px;
+    border-radius:80px;
+}
+.main{
+    margin-top:2vh;
+    margin-bottom: 50vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.main-board{
+    margin-top:10vh;
+    margin-bottom: 50vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.title-form{
+    margin-bottom: 4px;
+    margin-top: 39px;
+    color: rgb(242, 214, 165);
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.text-login{
+    width:270px;
+    color: rgb(122, 153, 86);
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.form{
+    margin-top:34px;
+    margin-bottom:46px;
+}
+.errorlist{
+    padding-left:25px;
+    list-style-type:none;
+    margin-top: 10px;
+    width:270px;
+    color: rgb(208, 79, 63);
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+}
+
+input{
+    padding-left:25px;
+    border:none;
+    outline:none;
+    width: 290px;
+    height: 40px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 8px 2px rgb(212, 122, 91);
+    background: rgb(255, 255, 255);
+}
+
+
+label{
+    color: rgb(237, 172, 81);
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
+}
+
+
+.field_button{
+    box-shadow: unset;
+    padding-left:unset;
+    background-color: unset;
+    outline: unset;
+    border: unset;
+    color: rgb(109, 139, 72);
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.form-link> a{
+    color: rgb(109, 139, 72);
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.text-log-action{
+    width:70%;
+    color: rgb(237, 172, 81);
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.link-log-action{
+    color: rgb(109, 139, 72);
+    margin-bottom: 45px;
+}
+
+
+
+.text-autor{
+    color: rgba(68, 40, 36, 0.88);
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.item-recipe-prev{
+    border-radius: 25px;
+    box-shadow: 0px 0px 20px 7px
+                rgba(68, 40, 36, 0.5);
+    background: rgba(255, 237, 207, 0.8);
+}
+
+
+.content-start-page{
+    margin-top:10vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 145px;
+}
+
+.item-recipe-prev{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-recipe{
+    border-radius: 2px;
+    width:300px;
+    height: 150px;
+}
+
+.title-recipe{
+    margin-bottom:21px;
+    width:200px;
+    color: rgba(68, 40, 36, 0.88);
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.result-field{
+
+    color:#7A9856;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    }
+
+.complexity{
+    margin-top:10px;
+}
+
+
+.title-item{
+    margin-top:13px;
+    color: rgba(68, 40, 36, 0.88);
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+.link-item{
+    margin-bottom:15px;
+}
+
+
+.content-single-recipe{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipe-single{
+    height:unset;
+}
+
+.description-recipe{
+    width:550px;
+    margin:45px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 45px;
+    box-shadow: 0px 0px 20px 5px rgba(68, 40, 36, 0.25);
+    background: rgba(237, 172, 81, 0.4);
+}
+
+.description-title{
+    color: rgb(208, 79, 63);
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    text-align:center;
+    margin: 25px;
+}
+
+.text-description{
+    color: rgba(68, 40, 36, 0.88);
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.img-recipe-list{
+    margin-bottom: 25px;
+}
+
+.button-create-recipe{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 298px;
+    height: 80px;
+    border-radius: 80px;
+    box-shadow: 0px 0px 20px 3px rgba(255, 237, 207, 0.8);
+    background: rgba(68, 40, 36, 0.9);
+}
+
+.text-button-create{
+    color: rgba(237, 172, 81, 0.8);
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.form-recipe-create{
+    border-radius: 80px;
+    box-shadow: 0px 4px 50px 0px rgb(245, 215, 165);
+    background: rgb(68, 40, 36);
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-forms{
+    margin-top:35px;
+    color: rgb(242, 214, 165);
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.form-create{
+    margin-left:55px;
+    margin-right:55px;
+}
+
+.button_create{
+    margin-right: auto;
+    margin-left: auto;
+    width: 150px;
+    margin-top:55px;
+    border-radius: 85px;
+    background: rgba(255, 237, 207, 0.8);
+}
+
+.field_button_create{
+    color: rgb(208, 79, 63);
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.text-forms-help{
+    color: rgb(122, 153, 86);
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.text-area{
+    border-radius:25px;
+    padding-left: 25px;
+    padding-top: 25px;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 8px 2px rgb(212, 122, 91);
+    background: rgb(255, 255, 255);
+}
+.image-field{
+    width:unset;
+    height:unset;
+    box-shadow: unset;
+    padding-left:unset;
+    background-color: unset;
+    outline: unset;
+    border: unset;
+    padding-left:25px;
+    color: rgb(122, 153, 86);
+}
+
+
+.form-recipe{
+    margin-top: 15vh;
+    border-radius: 25px;
+    box-shadow: 0px 0px 20px 7px rgba(68, 40, 36, 0.5);
+    background: rgba(255, 237, 207, 0.8);
+}
+
+.recipe-compleate{
+
+    display: flex;
+    width: 250px;
+    height: 150px;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-notification{
+    margin-top:unset;
+    color: rgba(68, 40, 36, 0.88);
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+textarea::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+.title-recipe-book{
+    color: rgba(68, 40, 36, 0.88);
+    font-size: 34px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.content-recipe-book{
+    border-radius: 25px;
+    box-shadow: 0px 0px 20px 7px rgba(68, 40, 36, 0.5);
+    background: rgba(255, 237, 207, 0.8);
+}
+
+.sort-recipe{
+    text-align:center;
+}
+
+body > main > form > p:nth-child(2) > label{
+    text-align:center;
+}
+
+.erro-sorted{
+    margin-top:5vh;
+    color: rgb(237, 172, 81);
+    font-size: 25px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.footer{
+
+    padding-bottom:25px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    height:100px;
+    box-shadow: 0px -5px 33px 1px
+                rgba(68, 40, 36, 0.88);
+    background: linear-gradient(180.00deg,
+                rgba(68, 40, 36, 0.88) 0.763%,
+                rgb(237, 172, 81) 7.634%);
+}

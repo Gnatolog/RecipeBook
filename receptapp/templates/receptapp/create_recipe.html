@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Добавить рецепт{% endblock %}
+{% block content %}
+<script>
+    var element = document.querySelector('.main');
+    element.classList.add('main-board');
+
+</script>
+<section class="form-recipe-create">
+    <h1 class="title-forms">Добавить рецепт</h1>
+    <p class="text-forms-help">Для добавления рецепта зполните все поля</p>
+    <div class="form form-create">
+            <form class="form-field" action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form_recipe.as_p }}
+                {{ category_form.as_p }}
+                <p class="button_create" >
+                    <input class="field_button field_button_create" type="submit" value="Сохранить рецепт">
+                </p>
+            </form>
+    </div>
+
+</section>
+
+
+{% endblock %}

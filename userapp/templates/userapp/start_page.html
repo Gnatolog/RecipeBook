@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Главная страница {% endblock %}
+
+{% block content %}
+    <script>
+        var element = document.querySelector('.main');
+        element.classList.add('main-board');
+
+    </script>
+    <section class="content-start-page">
+            {% for key, value in recipe_book.items %}
+                <div class="item-recipe-prev">
+                    {% for recipe in value %}
+                        <p class="title-recipe">{{recipe.title}}</p>
+                        <img  class="img-recipe" src=" {{recipe.image_recipe.url}} " width="150px">
+                        <p class="result-field">{{ key.category.title_category }}</p>
+                        <h4 class="title-item">
+                            Сложность приготовления <p class="complexity result-field">{{ key.category.complexity }}</p>
+                        </h4>
+                        <a  class="link-navi link-item" href="{% url 'recipe_show_single' recipe.id  %}">Посмотреть</a>
+                    {% endfor %}
+
+
+                </div>
+            {% endfor %}
+
+
+
+
+    </section>
+
+{% endblock %}

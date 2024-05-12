@@ -1,0 +1,77 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index_mobile.css' %}">
+    <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+    <title>{% block title %} Страница входа {% endblock %}</title>
+</head>
+<body>
+        {% if request.user.is_authenticated %}
+        <header class="header header-start-page navbar menu">
+                <div class="container">
+                    <div class="navbar_wrap">
+                            <div class="hamb">
+                                <div class="hamb_field" id="hamb">
+                                    <span class="bar"></span>
+                                    <span class="bar"></span>
+                                    <span class="bar"></span>
+                                </div>
+
+                            </div>
+
+                        <div class="img_ham-menu">
+                           <a href="{% url 'start_page' %}">
+                               <img class="logo " src="{% static 'img/logo_book_recipe.png'%}" alt="логотип">
+                           </a>
+                        </div>
+                        <ul class="navi-menu menu" id="menu">
+                            <li><a class="link-navi" href="{% url 'start_page' %}">Главная</a></li>
+                            <li><a class="link-navi" href="{% url 'my_recipe' %}">Мои рецепты</a></li>
+                            <li><a class="link-navi" href="{% url 'recipe_book_show' %}">Все рецепты</a></li>
+                        </ul>
+                        <div class="header-auth">
+                            <span class="user">
+                                Привет {{ request.user.first_name|default:request.user.username }}
+                            </span>
+                            <form action="{% url 'logout' %}" method="post">
+                                {% csrf_token %}
+                                <button class="button-exit" type="submit">
+                                    <p class="text-link-menu">выйти</p>
+                                </button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+        </header>
+        <div class="popup" id="popup"></div>
+        {% else %}
+            <header class="header-start-page">
+                <img class="logo " src="{% static 'img/logo_book_recipe.png'%}" alt="логотип">
+            </header>
+
+        {% endif %}
+
+    <main class="main">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+
+    {% if request.user.is_authenticated %}
+        <footer class="footer">
+            <p class="text-autor">&copy;Все права защищены</p>
+            <p class="text-autor">2024</p>
+        </footer>
+    {% endif %}
+</body>
+</html>

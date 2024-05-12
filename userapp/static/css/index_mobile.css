@@ -1,0 +1,234 @@
+/* меню гамбургер*/
+
+.logo img{
+    width: 50px;
+}
+.logo_git img{
+  width: 30px;
+}
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  line-height: 1.2;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 15px;
+}
+
+
+.img_ham_menu{
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.navbar_wrap {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.hamb {
+  display: none;
+}
+
+.popup {
+  display: none;
+}
+
+
+.navbar_wrap .menu {
+  display: flex;
+}
+
+.menu > li > a {
+  text-decoration: none;
+}
+
+.navbar_wrap .menu > li {
+  display: flex;
+  align-items: stretch;
+}
+.navbar_wrap .menu > li > a {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+
+}
+
+.navbar_wrap .menu > li > a:hover {
+  color: #257e45;
+}
+
+
+
+@media (max-width: 1000px) {
+
+  .main-board{
+    margin-top:22vh;
+  }
+
+  .navbar_wrap .menu {
+    display: none;
+  }
+  .navbar {
+    position: fixed;
+    left: 0;
+  /*  top: 0;*/
+    width: 100%;
+    height: 120px;
+  /*  background: #222222;*/
+    z-index: 5;
+  }
+  .hamb {
+    display: flex;
+    align-items: center;
+  }
+
+  .hamb_field {
+    padding: 10px 20px;
+    cursor: pointer;
+
+  }
+
+  .bar {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 6px auto;
+    background-color: rgb(208, 79, 63);
+    transition: 0.2s;
+  }
+
+  .popup {
+    position: fixed;
+    top: 119px;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #F5D7A5;
+    z-index: 100;
+    display: flex;
+    transition: 0.3s;
+  }
+
+  .popup.open {
+    left: 0;
+  }
+
+  .popup .menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 50px 0;
+    overflow: auto;
+    border: none;
+  }
+
+  .popup .menu > li {
+    width: 100%;
+  }
+
+  .popup .menu > li > a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3f3f3f;
+  }
+
+  .popup .menu > li > a:hover {
+    background-color: rgba(122, 82, 179, 0.1);
+  }
+
+  .hamb_field.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamb_field.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamb_field.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+}
+
+
+
+@media(max-width: 767px){
+    body > header > div > div > div.header-auth > form > button > p{
+      font-size:12px;
+    }
+    .user{
+      font-size:13px;
+    }
+    .logo{
+      margin:25px;
+      width:68px;
+    }
+    .forms-registration{
+        width: 300px;
+    }
+    input{
+        width:250px;
+    }
+
+    .description-recipe{
+        width:320px;
+
+    }
+
+    .text-area{
+        width:280px;
+    }
+
+}
+
+@media(max-width: 424px){
+
+    .text-area{
+        width:250px;
+    }
+
+    .form-create{
+        margin-right:10px;
+        margin-left:10px;
+    }
+
+    .description-recipe{
+        width:280px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+
+}

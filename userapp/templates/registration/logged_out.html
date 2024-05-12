@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Досвидания{% endblock %}
+{% block content %}
+
+    <div id="particles-js"></div>
+    <script type="text/javascript" src="{% static 'js/particles.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/lib/stats.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/particl_config.js' %}"></script>
+
+   <section class="forms-registration">
+        <h1 class="title-form">До свидания</h1>
+        <p class="text-log-action">
+            Вы успешно вышли из системы
+            Можете <a class="link-log-action" href="{% url 'login' %}">Войти заново</a>
+        </p>
+   </section>
+{% endblock %}

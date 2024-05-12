@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Удаление рецепта{% endblock%}
+{% block content %}
+<script>
+    var element = document.querySelector('.main');
+    element.classList.add('main-board');
+
+</script>
+       <section class="form-recipe">
+        <div class="recipe-compleate">
+            <p class="text-notification">
+                Рецепт удалён
+            </p>
+        </div>
+    </section>
+{% endblock %}

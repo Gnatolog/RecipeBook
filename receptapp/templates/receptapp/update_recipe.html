@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Изменение рецепта {% endblock %}
+
+{% block content %}
+<script>
+    var element = document.querySelector('.main');
+    element.classList.add('main-board');
+
+</script>
+
+<section class="form-recipe-create">
+    <h1 class="title-forms">Изменить рецепт</h1>
+    <div class="form form-create">
+            <form class="form-field" action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ new_form.as_p }}
+                <p class="button_create" >
+                    <input class="field_button field_button_create" type="submit" value="Изменить">
+                </p>
+            </form>
+    </div>
+
+</section>
+
+
+
+{% endblock %}

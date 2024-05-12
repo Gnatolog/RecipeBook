@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Рецепт {{recipe.title}}{% endblock %}
+{% block content %}
+<script>
+    var element = document.querySelector('.main');
+    element.classList.add('main-board');
+
+</script>
+    <section class="content-single-recipe">
+                <div class="item-recipe-prev recipe-single">
+                        <p class="title-recipe">{{recipe.title}}</p>
+                        <img  class="img-recipe" src=" {{recipe.image_recipe.url}} " width="150px">
+                        <div class="description-recipe">
+                            <h3 class="description-title">Описание блюда
+                                <p class="text-description">
+                                    {{recipe.description}}
+                                </p>
+                            </h3>
+                            <h3 class="description-title">Шаги приготовления
+                                <p class="text-description">
+                                    {{recipe.cooking_steps}}
+                                </p>
+                            </h3>
+                            <h3 class="description-title">Время приготовления
+                                <p class="text-description">
+                                    {{recipe.cooking_time}}
+                                </p>
+                            </h3>
+                            <h3 class="description-title">Автор рецепта
+                                <p class="text-description">
+                                    {{recipe.author}}
+                                </p>
+                            </h3>
+
+                        </div>
+
+
+                </div>
+
+    </section>
+
+{% endblock %}

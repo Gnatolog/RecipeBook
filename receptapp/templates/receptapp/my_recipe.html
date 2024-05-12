@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Мои рецепты {% endblock %}
+
+{% block content %}
+<script>
+    var element = document.querySelector('.main');
+    element.classList.add('main-board');
+
+</script>
+<h2 class="button-create-recipe"><a class="text-button-create" href="{% url 'create_recipe' %}">Добавить рецепт</a></h2>
+    <section class="content-start-page">
+         {% for recipe in recipe_author %}
+                <div class="item-recipe-prev">
+
+                        <p class="title-recipe">{{recipe.title}}</p>
+                        <img  class="img-recipe img-recipe-list" src=" {{recipe.image_recipe.url}} " width="150px">
+                        <a class="link-navi link-item" href="{% url 'recipe_update' recipe.id %}">Изменить</a>
+                        <a class="link-navi link-item" href="{% url 'recipe_del' recipe.id %}">Удалить</a>
+                        <a  class="link-navi link-item" href="{% url 'recipe_show_single' recipe.id %}">Посмотреть</a>
+
+
+                </div>
+        {% endfor %}
+    </section>
+
+
+
+{% endblock %}
